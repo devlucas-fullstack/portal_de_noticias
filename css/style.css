@@ -32,3 +32,63 @@ h2,
 h3 {
   font: inherit;
 }
+
+.container {
+  max-width: 1280px;
+  padding-inline: 2rem;
+  margin-inline: auto;
+}
+
+/* header */
+
+/* nav primary */
+#primary {
+  display: flex;
+  justify-content: space-between;
+  padding-block: 1.2rem;
+}
+
+#menu img,
+#search img {
+  cursor: pointer;
+  margin-right: 0.5rem;
+}
+
+@media (max-width: 426px) {
+  #menu span {
+    display: none;
+  }
+
+  #search span {
+    display: none;
+  }
+}
+
+/* nav secundary */
+#secundary {
+  padding-block: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid var(--stroke-color);
+  border-inline: none;
+}
+
+#secundary a {
+  text-decoration: none;
+  color: var(--text-color-secundary);
+}
+#secundary a:hover {
+  color: var(--brand-color-light);
+}
+
+@media (max-width: 769px) {
+  .link-none-md {
+    display: none;
+  }
+}
+
+@media (max-width: 426px) {
+  .link-none-sm {
+    display: none;
+  }
+}
