@@ -34,9 +34,9 @@ h3 {
 }
 
 .container {
-  max-width: 1280px;
-  padding-inline: 2rem;
-  margin-inline: auto;
+  max-width: 1280px !important;
+  padding-inline: 2rem !important;
+  margin-inline: auto !important;
 }
 
 /* header */
@@ -91,4 +91,17 @@ h3 {
   .link-none-sm {
     display: none;
   }
+}
+
+/* main */
+
+/* section read */
+#featured {
+  margin-top: 2.5rem;
+}
+
+.img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 4px;
 }
