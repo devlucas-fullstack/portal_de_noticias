@@ -13,12 +13,12 @@
   --text-color-secundary: #cbd5e1;
 
   --font-family: "Archivo", sans-serif;
-  --h1: 800 24px/135% var(--font-family);
-  --h2: 800 16px/140% var(--font-family);
-  --h3: 800 14px/140% var(--font-family);
-  --text-span: 600 14px/145% var(--font-family);
-  --text: 400 16px/140% var(--font-family);
-  --text-sm: 400 14px/160% var(--font-family);
+  --h1: 800 clamp(1.25rem, 1.06rem + 0.94vw, 1.5rem) / 135% var(--font-family);
+  --h2: 800 clamp(0.875rem, 0.78rem + 0.47vw, 1rem) / 140% var(--font-family);
+  --h3: 800 clamp(0.75rem, 0.65rem + 0.47vw, 0.875rem) / 140% var(--font-family);
+  --text-span: 600 clamp(12px, 1.1vw, 16px) / 145% var(--font-family);
+  --text: 400 clamp(14px, 1.25vw, 18px) / 140% var(--font-family);
+  --text-sm: 400 clamp(12px, 1.1vw, 14px) / 160% var(--font-family);
 }
 
 body {
@@ -31,6 +31,28 @@ h1,
 h2,
 h3 {
   font: inherit;
+}
+
+.text-2xl {
+  font: var(--h1);
+}
+
+.text-xl {
+  font: var(--h2);
+}
+
+.text-lg {
+  font: var(--h3);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-height: calc(1.4em * 3);
+}
+
+.text-sm {
+  font: var(--text-sm);
 }
 
 .container {
@@ -117,5 +139,26 @@ h3 {
     inset: 0;
     top: 50%;
     background: linear-gradient(180deg, transparent 0%, #020617 100%);
+  }
+
+  figcaption {
+    position: absolute;
+    bottom: 0;
+    padding: 1.5rem;
+
+    span {
+      display: inline-block;
+      background-color: var(--brand-color-dark);
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      text-transform: uppercase;
+      font: 500 clamp(12px, 0.75vw, 16px) / 1.2 var(--font-family);
+      color: var(--text-color-primary);
+      margin-bottom: 8px;
+    }
+
+    &:has(.text-lg) {
+      padding: 0.7rem;
+    }
   }
 }
