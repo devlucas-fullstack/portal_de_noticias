@@ -170,13 +170,35 @@ h3 {
 }
 
 /* section weckly */
-section#weckly a {
-  text-decoration: none;
-  color: var(--text-color-secundary);
+#weckly {
+  margin-top: 5rem;
+  border-top: 1px solid var(--stroke-color);
+  padding-top: 12px;
 }
 
-section#weckly a:hover {
+section#weckly header {
+  display: flex;
+  justify-content: space-between;
+}
+
+section#weckly header h3,
+a {
+  font: var(--text-span);
+}
+
+section#weckly header a {
+  text-decoration: none;
+  color: var(--text-color-secundary);
+  gap: 4px;
+}
+
+section#weckly header a:hover {
   color: var(--brand-color-light);
+}
+
+section#weckly main {
+  border: 1px solid red;
+  padding-top: 1.5rem;
 }
 
 section#weckly main img {
@@ -185,11 +207,24 @@ section#weckly main img {
   border-radius: 4px;
 }
 
-section#weckly header {
-  display: flex;
-  justify-content: space-between;
+section#weckly main figure {
+  position: relative;
 }
 
-section#weckly main {
-  border: 1px solid red;
+section#weckly main figure span {
+  display: inline-block;
+  background-color: var(--brand-color-dark);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font: 500 clamp(12px, 0.75vw, 16px) / 1.2 var(--font-family);
+  color: var(--text-color-primary);
+  position: absolute;
+  top: 0.5rem;
+  left: 1rem;
+}
+
+section#weckly main figure p {
+  font-weight: 800;
+  margin-top: 0.5rem;
 }
