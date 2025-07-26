@@ -197,7 +197,6 @@ section#weckly header a:hover {
 }
 
 section#weckly main {
-  border: 1px solid red;
   padding-top: 1.5rem;
 }
 
@@ -227,4 +226,10 @@ section#weckly main figure span {
 section#weckly main figure p {
   font-weight: 800;
   margin-top: 0.5rem;
+}
+
+/* section ia */
+#highlights,
+#apart {
+  border: 1px solid red;
 }
