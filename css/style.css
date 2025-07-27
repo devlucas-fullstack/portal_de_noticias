@@ -172,13 +172,13 @@ h3 {
 /* section weckly */
 #weckly {
   margin-top: 5rem;
-  border-top: 1px solid var(--stroke-color);
-  padding-top: 12px;
 }
 
 section#weckly header {
   display: flex;
   justify-content: space-between;
+  border-top: 1px solid var(--stroke-color);
+  padding-top: 12px;
 }
 
 section#weckly header h3,
@@ -229,7 +229,122 @@ section#weckly main figure p {
 }
 
 /* section ia */
-#highlights,
+section#ia {
+  margin-top: 5rem;
+}
+
+#highlights {
+  header {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--stroke-color);
+    padding-top: 12px;
+    margin-bottom: 1.5rem;
+
+    h3 {
+      font: var(--text-span);
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--text-color-secundary);
+      gap: 4px;
+      font: var(--text-span);
+    }
+    a:hover {
+      color: var(--brand-color-light);
+    }
+  }
+
+  article {
+    display: flex;
+    margin-bottom: 2rem;
+    gap: 1rem;
+
+    span {
+      display: inline-block;
+      background-color: var(--brand-color-dark);
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      text-transform: uppercase;
+      font: 500 clamp(12px, 0.75vw, 16px) / 1.2 var(--font-family);
+      color: var(--text-color-primary);
+      margin-bottom: 8px;
+    }
+
+    h3 {
+      margin-bottom: 4px;
+    }
+
+    img {
+      width: 11rem;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  #highlights header a span {
+    display: none;
+  }
+
+  #ia article div img {
+    width: 100%;
+  }
+}
+
 #apart {
-  border: 1px solid red;
+  #ads img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 2rem;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--stroke-color);
+    padding-top: 12px;
+    margin-bottom: 1.5rem;
+
+    h3 {
+      font: var(--text-span);
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--text-color-secundary);
+      gap: 4px;
+      font: var(--text-span);
+    }
+    a:hover {
+      color: var(--brand-color-light);
+    }
+  }
+
+  article {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+
+    img {
+      width: 4.5rem;
+      object-fit: cover;
+      height: auto;
+    }
+
+    span {
+      display: inline-block;
+      background-color: var(--brand-color-dark);
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      text-transform: uppercase;
+      font: 500 clamp(12px, 0.75vw, 16px) / 1.2 var(--font-family);
+      color: var(--text-color-primary);
+      margin-bottom: 8px;
+    }
+  }
 }
